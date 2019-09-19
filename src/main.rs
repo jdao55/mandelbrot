@@ -61,13 +61,9 @@ use std::io::Write;
 fn main() {
     let args: Vec<String> = std::env::args().collect();
 
-    if args.len() != 5 {
+    if args.len() != 3 {
         writeln!(std::io::stderr(),
-                 "Usage: mandelbrot FILE PIXELS UPPERLEFT LOWERRIGHT")
-            .unwrap();
-        writeln!(std::io::stderr(),
-                 "Example: {} mandel.png 1000x750 -1.20,0.35 -1,0.20",
-                 args[0])
+                 "Usage: mandelbrot filename dimensions(1200x800) ")
             .unwrap();
         std::process::exit(1);
     }
