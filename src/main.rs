@@ -43,7 +43,7 @@ fn value(x: u32, y: u32, bounds: (usize, usize) ) -> u8 {
     let y = y as f32;
     let a = bounds.0 as f32;
     let b = bounds.1 as f32;
-    let point = Complex { re: x/a - 1.5, im: y/b -0.5 };
+    let point = Complex {re: x/a - 1.5, im: y/b -0.5};
     let mut z = Complex {re: 0 as f32, im: 0 as f32};
 
     for i in 0..255 {
